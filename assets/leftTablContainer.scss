@@ -1,0 +1,35 @@
+.fy_leftTab_Container {
+  display: block;
+  clear: both;
+  .mainContainer {
+    margin: 1rem auto 0;
+  }
+  .fy_leftTab_tabs {
+    margin: 1rem auto 0;
+    float: left;
+    width: 5rem;
+    .fy_leftTab_item {
+      border-top: 1px solid #e0e0e0;
+      border-right: 1px solid #e0e0e0;
+      text-align: center;
+      padding: 0.5rem;
+      &:last-child {
+        border-bottom: 1px solid #e0e0e0;
+      }
+      .fy_leftTab_item_title {
+        color: #000;
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+      }
+      &.actived {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+  .fy_leftTab_body {
+    float: right;
+    width: calc(100% - 5rem);
+  }
+}
