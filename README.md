@@ -16,14 +16,14 @@ const LeftTabItem = LeftTabContainer.Item;
 and then use in your page
 ```HTML
 <LeftTabContainer onSelect={this.handleSelect} activedId={id}>
-        <TabItem id="1" title="类型1" >
-          <ProductType id={1} />
+        <TabItem id="1" title="Tab1" >
+          <TabChild {...some_props} />
         </TabItem>
-        <TabItem id="2" title="类型2" >
-          <ProductType id={2} />
+        <TabItem id="2" title="Tab2" >
+          <TabChild {...some_props} />
         </TabItem>
-        <TabItem id="3" title="类型3" >
-          <ProductType id={3} />
+        <TabItem id="3" title="Tab3" >
+          <TabChild {...some_props} />
         </TabItem>
       </LeftTabContainer>
 ```
