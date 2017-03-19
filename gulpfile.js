@@ -25,12 +25,22 @@ gulp.task('sass', function () {
         // .pipe(livereload());
 });
 
-gulp.task('source-js', function () {
-    return gulp.src('./src/LeftTabContainer.jsx')
+gulp.task('index-js', function () {
+    return gulp.src('./index.js')
         .pipe(concat('left-tab-container.js'))
+        .pipe(replace('./src', '.'))
         .pipe(babel(babelOptions))
         .pipe(gulp.dest('./dist'))
         .pipe(livereload());
 });
 
-gulp.task('build', ['source-js', 'sass']);
+gulp.task('source-js', function () {
+    return gulp.src('./src/*.jsx')
+        //.pipe(concat('left-tab-container.js'))
+        .pipe(babel(babelOptions))
+        .pipe(gulp.dest('./dist'))
+        .pipe(livereload());
+});
+
+
+gulp.task('build', ['index-js', 'source-js', 'sass']);
