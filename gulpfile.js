@@ -20,16 +20,15 @@ var babelOptions = {
 gulp.task('sass', function () {
     gulp.src('./assets/leftTabContainer.scss')
         .pipe(sass())
-        .pipe(rename('left-tab-containe.css'))
+        .pipe(rename('left-tab-container.css'))
         .pipe(gulp.dest('./dist'));
         // .pipe(livereload());
 });
 
 gulp.task('source-js', function () {
     return gulp.src('./src/LeftTabContainer.jsx')
-        .pipe(concat('left-tab-containe.js'))
+        .pipe(concat('left-tab-container.js'))
         .pipe(babel(babelOptions))
-        // .pipe(replace('../assets/numberInput.scss', './number-input.css'))
         .pipe(gulp.dest('./dist'))
         .pipe(livereload());
 });
