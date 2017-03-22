@@ -72,6 +72,9 @@ var LeftTabContainer = function (_React$Component) {
       var activedId = this.state.activedId;
 
       var items = _react2.default.Children.map(children, function (child) {
+        if (!!!child) {
+          return;
+        }
         if (activedId === child.props.id) {
           return _react2.default.cloneElement(child, { actived: true, onSelect: _this3.handleSelect });
         }

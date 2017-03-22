@@ -39,6 +39,9 @@ class LeftTabContainer extends React.Component {
     const {children} = this.props;
     const {activedId} =this.state;
     let items = React.Children.map(children, child=> {
+      if(!!!child){
+        return;
+      }
       if (activedId === child.props.id) {
         return React.cloneElement(child, {actived: true, onSelect: this.handleSelect});
       }
