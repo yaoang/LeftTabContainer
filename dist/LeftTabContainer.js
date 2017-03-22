@@ -55,6 +55,9 @@ var LeftTabContainer = function (_React$Component) {
       }
 
       _react2.default.Children.map(children, function (child) {
+        if (!!!child) {
+          return;
+        }
         if (activedId === child.props.id) {
           _this2.state.activedChild = child.props.children;
         }
