@@ -24,9 +24,13 @@
         }
       }
       &.actived {
-        //background-color: #e0e0e0;
-        //border-left: 0.4rem solid #BB0000;
-        color: #bb0000;
+        .fy_leftTab_item_title {
+          color: #bb0000;
+          a {
+            text-decoration: none;
+            color: #bb0000;
+          }
+        }
       }
     }
   }

@@ -19,8 +19,11 @@
         .fy_leftTab_Container .fy_leftTab_tabs .fy_leftTab_item .fy_leftTab_item_title a {
           text-decoration: none;
           color: #000; }
-      .fy_leftTab_Container .fy_leftTab_tabs .fy_leftTab_item.actived {
+      .fy_leftTab_Container .fy_leftTab_tabs .fy_leftTab_item.actived .fy_leftTab_item_title {
         color: #bb0000; }
+        .fy_leftTab_Container .fy_leftTab_tabs .fy_leftTab_item.actived .fy_leftTab_item_title a {
+          text-decoration: none;
+          color: #bb0000; }
   .fy_leftTab_Container .fy_leftTab_body {
     float: right;
     width: calc(100% - 5rem); }
