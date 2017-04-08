@@ -51,7 +51,9 @@ class LeftTabContainer extends React.Component {
     });
 
     if(!!!activedId){
-      items[0] = React.cloneElement(items[0], {actived: true});
+      if(items.length > 0) {
+        items[0] = React.cloneElement(items[0], {actived: true});
+      }
     }
 
     return items;

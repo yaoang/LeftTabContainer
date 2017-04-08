@@ -84,7 +84,9 @@ var LeftTabContainer = function (_React$Component) {
       });
 
       if (!!!activedId) {
-        items[0] = _react2.default.cloneElement(items[0], { actived: true });
+        if (items.length > 0) {
+          items[0] = _react2.default.cloneElement(items[0], { actived: true });
+        }
       }
 
       return items;
