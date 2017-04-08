@@ -21,7 +21,9 @@ class LeftTabContainer extends React.Component {
     const {children} = this.props;
     const {activedId} =this.state;
     if(!!!activedId){
-      this.state.activedChild = children[0].props.children;
+      if(children.length > 0) {
+        this.state.activedChild = children[0].props.children;
+      }
       return;
     }
 

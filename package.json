@@ -1,6 +1,6 @@
 {
   "name": "react-left-tab-container",
-  "version": "0.9.7",
+  "version": "0.9.8",
   "description": "React Container with left tabs",
   "main": "./dist/left-tab-container",
   "scripts": {

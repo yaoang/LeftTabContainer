@@ -50,7 +50,9 @@ var LeftTabContainer = function (_React$Component) {
       var activedId = this.state.activedId;
 
       if (!!!activedId) {
-        this.state.activedChild = children[0].props.children;
+        if (children.length > 0) {
+          this.state.activedChild = children[0].props.children;
+        }
         return;
       }
 
